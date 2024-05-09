@@ -21,6 +21,7 @@ func get_input():
 		shoot.emit(position, dir)
 		can_shoot = false
 		$ShotTimer.start()
+		
 func _physics_process(delta):
 	# player movement
 	get_input()

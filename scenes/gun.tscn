@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bi4828pty2puu"]
+
+[ext_resource type="Texture2D" uid="uid://wmnxpkiei784" path="res://assets/gun.png" id="1_i78oi"]
+[ext_resource type="Script" path="res://scenes/gun.gd" id="1_tfvcv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sv8kt"]
+
+[node name="Gun" type="Area2D"]
+scale = Vector2(1.25, 1.25)
+script = ExtResource("1_tfvcv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sv8kt")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+
+[node name="GunSprite" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(21.6, 0)
+scale = Vector2(1.03438, 1.03438)
+texture = ExtResource("1_i78oi")
+
+[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/GunSprite"]
+position = Vector2(9.53674e-07, 7.62939e-07)
