@@ -4,7 +4,7 @@ extends CharacterBody2D
 signal hit_player
 
 var alive: bool
-var speed = 150
+var speed = 250
 var player_position
 var target_position
 
